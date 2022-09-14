@@ -14,7 +14,7 @@ class ArticleDetailPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('News App'),
+        title: const Text('News App'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -23,7 +23,7 @@ class ArticleDetailPage extends StatelessWidget {
                 tag: article.urlToImage,
                 child: Image.network(article.urlToImage)),
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: const EdgeInsets.all(10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -31,27 +31,27 @@ class ArticleDetailPage extends StatelessWidget {
                     article.description,
                     style: Theme.of(context).textTheme.bodyText2,
                   ),
-                  Divider(color: Colors.grey),
+                  const Divider(color: Colors.grey),
                   Text(
                     article.title,
                     style: Theme.of(context).textTheme.headline6,
                   ),
-                  Divider(color: Colors.grey),
+                  const Divider(color: Colors.grey),
                   Text(
                     'Date: ${article.publishedAt}',
                     style: Theme.of(context).textTheme.caption,
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Text(
                     'Author: ${article.author}',
                     style: Theme.of(context).textTheme.caption,
                   ),
-                  Divider(color: Colors.grey),
+                  const Divider(color: Colors.grey),
                   Text(
                     article.content,
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   ElevatedButton(
                     child: Text('Read more'),
                     onPressed: () {

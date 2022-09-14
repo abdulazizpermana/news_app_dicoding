@@ -10,7 +10,7 @@ class SettingsPage extends StatelessWidget {
   Widget _buildAndroid(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(settingsTitle),
+        title: const Text(settingsTitle),
       ),
       body: _buildList(context),
     );
@@ -18,7 +18,7 @@ class SettingsPage extends StatelessWidget {
 
   Widget _buildIos(BuildContext context) {
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
+      navigationBar: const CupertinoNavigationBar(
         middle: Text(settingsTitle),
       ),
       child: _buildList(context),
@@ -30,7 +30,7 @@ class SettingsPage extends StatelessWidget {
       children: [
         Material(
           child: ListTile(
-            title: Text('Dark Theme'),
+            title: const Text('Dark Theme'),
             trailing: Switch.adaptive(
               value: false,
               onChanged: (value) {
@@ -40,8 +40,9 @@ class SettingsPage extends StatelessWidget {
                         barrierDismissible: true,
                         builder: (context) {
                           return CupertinoAlertDialog(
-                            title: Text('Coming Soon!'),
-                            content: Text('This feature will be coming soon!'),
+                            title: const Text('Coming Soon!'),
+                            content:
+                                const Text('This feature will be coming soon!'),
                             actions: [
                               CupertinoDialogAction(
                                 child: Text('Ok'),
@@ -57,14 +58,15 @@ class SettingsPage extends StatelessWidget {
                         context: context,
                         builder: (context) {
                           return AlertDialog(
-                            title: Text('Coming Soon!'),
-                            content: Text('This feature will be coming soon!'),
+                            title: const Text('Coming Soon!'),
+                            content:
+                                const Text('This feature will be coming soon!'),
                             actions: [
                               TextButton(
                                 onPressed: () {
                                   Navigator.pop(context);
                                 },
-                                child: Text('Ok'),
+                                child: const Text('Ok'),
                               ),
                             ],
                           );
